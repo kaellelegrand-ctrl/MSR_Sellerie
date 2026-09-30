@@ -29,10 +29,10 @@ export default function SellerieMedicale() {
         description="MSR Sellerie est spécialisée dans la rénovation et la restauration de mobilier destiné aux professionnels de santé — sans jamais compromettre l'hygiène."
       />
 
-      <section className="max-w-6xl mx-auto px-6 pb-10 md:pb-12">
-        <div className="grid gap-8 md:grid-cols-[1fr_1.1fr] md:gap-12 items-center">
+      <section className="max-w-6xl mx-auto px-6 pb-6 md:pb-12">
+        <div className="grid gap-4 md:grid-cols-[1fr_1.1fr] md:gap-12 items-center">
           <Reveal type="scale">
-            <div className="aspect-4/5 w-full overflow-hidden rounded-2xl bg-ink">
+            <div className="aspect-video w-full overflow-hidden rounded-2xl bg-ink md:aspect-4/5">
               <img
                 src="/avant-apres/medical-1-apres.jpg"
                 alt="Fauteuil médical rénové par MSR Sellerie"
@@ -41,10 +41,10 @@ export default function SellerieMedicale() {
             </div>
           </Reveal>
           <Reveal delay={80}>
-            <p className="font-display italic text-2xl md:text-3xl leading-snug text-leather-light mb-6">
+            <p className="font-display italic text-xl md:text-3xl leading-snug text-leather-light mb-3 md:mb-6">
               Remis à neuf, jamais remplacé.
             </p>
-            <div className="space-y-4 border-l-2 border-leather/30 pl-6 text-bone-dim leading-relaxed text-lg">
+            <div className="space-y-3 border-l-2 border-leather/30 pl-4 text-bone-dim leading-relaxed text-base md:space-y-4 md:pl-6 md:text-lg">
               <p>
                 Tables d'examen, fauteuils médicaux, tabourets, sièges et
                 différents équipements peuvent être{" "}
@@ -67,17 +67,17 @@ export default function SellerieMedicale() {
           </Reveal>
         </div>
 
-        <div className="mt-14 md:mt-16">
+        <div className="mt-8 md:mt-16">
           <SceneKicker label="Une rénovation adaptée" />
-          <div className="grid gap-6 md:grid-cols-[1fr_1.4fr] md:gap-10">
+          <div className="grid gap-3 md:grid-cols-[1fr_1.4fr] md:gap-10">
             <Reveal>
-              <h2 className="font-display font-semibold text-2xl md:text-3xl leading-snug text-bone">
+              <h2 className="font-display font-semibold text-xl md:text-3xl leading-snug text-bone">
                 Fait pour être désinfecté.{" "}
                 <span className="text-leather-light">Pensé pour durer.</span>
               </h2>
             </Reveal>
             <Reveal delay={80}>
-              <div className="space-y-4 text-bone-dim leading-relaxed text-lg">
+              <div className="space-y-3 text-bone-dim leading-relaxed text-base md:space-y-4 md:text-lg">
                 <p>
                   Chaque intervention est réalisée sur mesure selon la forme,
                   les dimensions et l'utilisation de votre équipement.
@@ -92,12 +92,12 @@ export default function SellerieMedicale() {
           </div>
         </div>
 
-        <div className="mt-10 md:mt-12">
+        <div className="mt-8 md:mt-12">
           <SceneKicker label="Nos prestations s'adressent notamment aux" />
-          <ul className="grid gap-3 sm:grid-cols-2 max-w-2xl">
+          <ul className="grid gap-2 sm:grid-cols-2 sm:gap-3 max-w-2xl">
             {clientele.map((item, i) => (
               <Reveal key={item} delay={i * 60}>
-                <li className="flex items-start gap-3 text-bone-dim text-lg">
+                <li className="flex items-start gap-3 text-bone-dim text-base md:text-lg">
                   <span className="mt-2.5 h-1.5 w-1.5 shrink-0 rounded-full bg-leather" />
                   {item}
                 </li>
@@ -106,16 +106,16 @@ export default function SellerieMedicale() {
           </ul>
         </div>
 
-        <div className="mt-10 grid md:grid-cols-[2fr_3fr] gap-6 md:gap-10 items-center md:mt-12">
+        <div className="mt-8 grid md:grid-cols-[2fr_3fr] gap-4 md:gap-10 items-center md:mt-12">
           <Reveal type="scale">
             <ImageCarousel groups={salleAttenteGroups} alt="Chaise de salle d'attente" />
           </Reveal>
           <Reveal delay={100}>
             <SceneKicker label="Et aussi" />
-            <h3 className="font-display font-semibold text-xl text-bone mb-2">
+            <h3 className="font-display font-semibold text-lg text-bone mb-1.5 md:text-xl md:mb-2">
               Chaise et matériaux de salle d'attente
             </h3>
-            <p className="text-bone-dim leading-relaxed">
+            <p className="text-bone-dim text-sm leading-relaxed md:text-base">
               Nous prenons également en charge les chaises et matériaux de
               vos espaces d'attente : recouvrement des assises, remplacement
               des mousses et choix de tissus faciles à entretenir, pour un
@@ -125,18 +125,18 @@ export default function SellerieMedicale() {
         </div>
       </section>
 
-      <section className="border-y border-leather/30 bg-ink-light py-10 md:py-12">
+      <section className="border-y border-leather/30 bg-ink-light py-8 md:py-12">
         <div className="max-w-5xl mx-auto px-6">
           <SceneKicker index="02" label="Avant / Après" />
           <Reveal>
-            <h2 className="font-display font-bold text-act text-bone mb-4">
+            <h2 className="font-display font-bold text-act text-bone mb-2 md:mb-4">
               Le même fauteuil.
               <br />
               Une autre présence.
             </h2>
           </Reveal>
           <Reveal delay={100}>
-            <p className="text-bone-dim leading-relaxed max-w-2xl text-lg mb-6">
+            <p className="text-bone-dim leading-relaxed max-w-2xl text-base mb-4 md:text-lg md:mb-6">
               Faites glisser pour comparer — chaque rénovation transforme un
               mobilier abîmé ou vieillissant tout en conservant sa structure
               d'origine.
@@ -148,7 +148,7 @@ export default function SellerieMedicale() {
         </div>
       </section>
 
-      <section className="bg-bone px-6 py-14 text-center md:py-16">
+      <section className="bg-bone px-6 py-10 text-center md:py-16">
         <div className="mx-auto max-w-2xl">
           <Reveal>
             <h2 className="font-display font-bold text-act text-ink">
@@ -158,13 +158,13 @@ export default function SellerieMedicale() {
             </h2>
           </Reveal>
           <Reveal delay={120}>
-            <p className="mt-5 text-lg leading-relaxed text-ink/70">
+            <p className="mt-3 text-base leading-relaxed text-ink/70 md:mt-5 md:text-lg">
               Des finitions propres et hygiéniques, pensées pour vos
               patients.
             </p>
           </Reveal>
           <Reveal delay={220}>
-            <CtaButton to="/contact" size="lg" className="mt-8">
+            <CtaButton to="/contact" size="lg" className="mt-6 md:mt-8">
               Parlons de votre cabinet
             </CtaButton>
           </Reveal>

@@ -1,5 +1,4 @@
 import { NavLink } from "react-router-dom"
-import { useState } from "react"
 import TricolorBar from "./TricolorBar"
 
 const links = [
@@ -43,14 +42,12 @@ function NavItem({ to, label, onClick, dark }) {
 }
 
 export default function Navbar() {
-  const [open, setOpen] = useState(false)
-
   return (
-    <header className="fixed top-0 z-50 w-full bg-leather/95 backdrop-blur">
+    <header className="fixed top-0 z-50 w-full bg-leather/95 backdrop-blur transform-gpu will-change-transform">
       <TricolorBar className="border-b" />
-      <div className="max-w-7xl pl-31.25 pr-6">
-        <div className="flex items-center h-[7.5rem]">
-          <div className="flex items-center h-full py-3">
+      <div className="max-w-7xl px-6 md:pl-31.25 md:pr-6">
+        <div className="flex items-center justify-center h-16 md:h-30 md:justify-start">
+          <div className="flex items-center h-full py-1.5 md:py-3">
             <NavLink to="/" className="flex items-center h-full">
               <img
                 src="/logo.png"
@@ -65,27 +62,8 @@ export default function Navbar() {
               <NavItem key={l.to} {...l} />
             ))}
           </nav>
-
-          <button
-            className="md:hidden ml-auto text-ink p-2"
-            onClick={() => setOpen(!open)}
-            aria-label="Ouvrir le menu"
-            aria-expanded={open}
-          >
-            <span className="block w-6 h-0.5 bg-ink mb-1.5" />
-            <span className="block w-6 h-0.5 bg-ink mb-1.5" />
-            <span className="block w-6 h-0.5 bg-ink" />
-          </button>
         </div>
       </div>
-
-      {open && (
-        <nav className="md:hidden flex flex-col gap-1 bg-leather/95 backdrop-blur px-6 pb-6 border-t border-black/10 pt-4">
-          {links.map((l) => (
-            <NavItem key={l.to} {...l} onClick={() => setOpen(false)} />
-          ))}
-        </nav>
-      )}
 
       <div className="pointer-events-none absolute inset-x-0 top-full h-6 bg-linear-to-b from-leather/40 to-transparent" />
     </header>

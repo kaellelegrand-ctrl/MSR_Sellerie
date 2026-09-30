@@ -27,14 +27,14 @@ body {
 
 /* Fluid display type for cinematic headlines */
 .text-mega {
-  font-size: clamp(2.5rem, 4vw + 1.3rem, 4.5rem);
+  font-size: clamp(1.5rem, 5.2vw + 0.37rem, 4.5rem);
   line-height: 1.08;
   letter-spacing: -0.01em;
   padding-bottom: 0.15em;
 }
 
 .text-act {
-  font-size: clamp(2.25rem, 2.4vw + 1.4rem, 4rem);
+  font-size: clamp(1.85rem, 2.4vw + 1.1rem, 4rem);
   line-height: 1.1;
   letter-spacing: -0.01em;
   padding-bottom: 0.15em;

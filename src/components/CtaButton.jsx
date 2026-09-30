@@ -8,8 +8,8 @@ const variants = {
 }
 
 const sizes = {
-  md: "px-6 py-3",
-  lg: "px-8 py-4",
+  md: "px-5 py-2.5 text-sm md:px-6 md:py-3 md:text-base",
+  lg: "px-6 py-3 text-sm md:px-8 md:py-4 md:text-base",
   none: "",
 }
 

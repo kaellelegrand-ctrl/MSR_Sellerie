@@ -17,10 +17,10 @@ export default function Plastification() {
         description="MSR Sellerie propose également des prestations de plastification adaptées à différents types de supports et d'usages professionnels."
       />
 
-      <section className="max-w-6xl mx-auto px-6 pb-10 md:pb-12">
-        <div className="grid gap-8 md:grid-cols-[1fr_1.3fr] md:gap-10 items-center">
+      <section className="max-w-6xl mx-auto px-6 pb-6 md:pb-12">
+        <div className="grid gap-4 md:grid-cols-[1fr_1.3fr] md:gap-10 items-center">
           <Reveal type="scale">
-            <div className="aspect-square w-full max-w-xs mx-auto overflow-hidden rounded-2xl bg-ink md:max-w-none">
+            <div className="aspect-video w-full max-w-72 mx-auto overflow-hidden rounded-2xl bg-ink md:aspect-square md:max-w-none">
               <img
                 src="/avant-apres/plastification-1-apres.jpg"
                 alt="Support plastifié par MSR Sellerie"
@@ -29,10 +29,10 @@ export default function Plastification() {
             </div>
           </Reveal>
           <Reveal delay={100}>
-            <p className="font-display italic text-2xl md:text-3xl leading-snug text-leather-light mb-6">
+            <p className="font-display italic text-xl md:text-3xl leading-snug text-leather-light mb-3 md:mb-6">
               Une seconde peau, discrète et solide.
             </p>
-            <div className="space-y-4 border-l-2 border-leather/30 pl-6 text-bone-dim leading-relaxed text-lg">
+            <div className="space-y-3 border-l-2 border-leather/30 pl-4 text-bone-dim leading-relaxed text-base md:space-y-4 md:pl-6 md:text-lg">
               <p>
                 La plastification permet de protéger une surface contre
                 l'usure, les salissures, l'humidité et les manipulations
@@ -54,17 +54,17 @@ export default function Plastification() {
           </Reveal>
         </div>
 
-        <div className="mt-14 md:mt-16">
+        <div className="mt-8 md:mt-16">
           <SceneKicker label="Une solution pratique et durable" />
-          <div className="grid gap-6 md:grid-cols-[1fr_1.4fr] md:gap-10">
+          <div className="grid gap-3 md:grid-cols-[1fr_1.4fr] md:gap-10">
             <Reveal>
-              <h2 className="font-display font-semibold text-2xl md:text-3xl leading-snug text-bone">
+              <h2 className="font-display font-semibold text-xl md:text-3xl leading-snug text-bone">
                 Résistant. Propre.{" "}
                 <span className="text-leather-light">Facile à vivre.</span>
               </h2>
             </Reveal>
             <Reveal delay={80}>
-              <div className="space-y-4 text-bone-dim leading-relaxed text-lg">
+              <div className="space-y-3 text-bone-dim leading-relaxed text-base md:space-y-4 md:text-lg">
                 <p>
                   Selon vos besoins, nous pouvons intervenir pour protéger,
                   recouvrir ou remettre en état différents éléments
@@ -82,18 +82,18 @@ export default function Plastification() {
         </div>
       </section>
 
-      <section className="border-y border-leather/30 bg-ink-light py-10 md:py-12">
+      <section className="border-y border-leather/30 bg-ink-light py-8 md:py-12">
         <div className="max-w-5xl mx-auto px-6">
           <SceneKicker index="05" label="Avant / Après" />
           <Reveal>
-            <h2 className="font-display font-bold text-act text-bone mb-4">
+            <h2 className="font-display font-bold text-act text-bone mb-2 md:mb-4">
               Une couche invisible.
               <br />
               Une différence nette.
             </h2>
           </Reveal>
           <Reveal delay={60}>
-            <p className="text-bone-dim leading-relaxed max-w-2xl text-lg mb-6">
+            <p className="text-bone-dim leading-relaxed max-w-2xl text-base mb-4 md:text-lg md:mb-6">
               Faites glisser pour comparer — des supports plastifiés par MSR
               Sellerie, pour une protection durable et un aspect soigné.
             </p>
@@ -104,7 +104,7 @@ export default function Plastification() {
         </div>
       </section>
 
-      <section className="bg-bone px-6 py-14 text-center md:py-16">
+      <section className="bg-bone px-6 py-10 text-center md:py-16">
         <div className="mx-auto max-w-2xl">
           <Reveal>
             <h2 className="font-display font-bold text-act text-ink">
@@ -114,12 +114,12 @@ export default function Plastification() {
             </h2>
           </Reveal>
           <Reveal delay={120}>
-            <p className="mt-5 text-lg leading-relaxed text-ink/70">
+            <p className="mt-3 text-base leading-relaxed text-ink/70 md:mt-5 md:text-lg">
               Simple à entretenir, résistante au quotidien.
             </p>
           </Reveal>
           <Reveal delay={220}>
-            <CtaButton to="/contact" size="lg" className="mt-8">
+            <CtaButton to="/contact" size="lg" className="mt-6 md:mt-8">
               Parlons de votre support
             </CtaButton>
           </Reveal>

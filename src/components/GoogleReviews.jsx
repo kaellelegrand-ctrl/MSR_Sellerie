@@ -86,13 +86,13 @@ function Avatar({ photo, name }) {
 
 export default function GoogleReviews({ index }) {
   return (
-    <section className="bg-ink-light py-12 md:py-16">
+    <section className="bg-ink-light py-6 md:py-16">
       <div className="max-w-7xl mx-auto px-6">
         <SceneKicker index={index} label="Avis clients" />
 
-        <div className="mb-8 flex flex-wrap items-end justify-between gap-4">
+        <div className="mb-4 flex flex-wrap items-end justify-between gap-3 md:mb-8 md:gap-4">
           <Reveal>
-            <p className="font-display italic text-2xl md:text-3xl leading-snug text-bone max-w-lg">
+            <p className="font-display italic text-lg md:text-3xl leading-snug text-bone max-w-lg">
               Ce que nos clients en disent.
             </p>
           </Reveal>
@@ -117,11 +117,15 @@ export default function GoogleReviews({ index }) {
           </Reveal>
         </div>
 
-        <div className="grid items-start gap-5 sm:grid-cols-2 lg:grid-cols-3">
+        <div className="-mx-6 flex snap-x snap-mandatory gap-3 overflow-x-auto overflow-y-hidden px-6 pb-1 sm:mx-0 sm:grid sm:snap-none sm:grid-cols-2 sm:gap-5 sm:overflow-visible sm:px-0 sm:pb-0 lg:grid-cols-3">
           {reviews.map((r, i) => (
-            <Reveal key={r.author} delay={i * 60}>
-              <div className="h-full rounded-lg bg-ink p-6 shadow-sm ring-1 ring-black/5 transition-shadow duration-300 hover:shadow-md">
-                <div className="mb-3 flex items-center gap-3">
+            <Reveal
+              key={r.author}
+              delay={i * 60}
+              className="w-[78%] max-w-72 shrink-0 snap-center sm:w-auto sm:max-w-none sm:shrink"
+            >
+              <div className="flex h-56 flex-col rounded-lg bg-ink p-4 shadow-sm ring-1 ring-black/5 transition-shadow duration-300 hover:shadow-md sm:block sm:h-auto md:p-6">
+                <div className="mb-2.5 flex items-center gap-3 md:mb-3">
                   <Avatar photo={r.photo} name={r.author} />
                   <div>
                     <p className="font-display font-semibold text-bone text-sm leading-tight">
@@ -131,7 +135,7 @@ export default function GoogleReviews({ index }) {
                   </div>
                 </div>
                 <Stars count={r.rating} />
-                <p className="mt-3 text-sm leading-relaxed text-bone-dim">
+                <p className="mt-2.5 min-h-0 flex-1 overflow-y-auto text-sm leading-relaxed text-bone-dim sm:flex-none sm:overflow-visible md:mt-3">
                   {r.text}
                 </p>
               </div>

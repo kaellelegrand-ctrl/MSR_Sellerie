@@ -12,7 +12,7 @@ export default function PageHero({
 
   return (
     <section className={dark ? "bg-bone" : ""}>
-      <div className="max-w-6xl mx-auto px-6 pt-6 pb-8 md:pt-8 md:pb-10">
+      <div className="max-w-6xl mx-auto px-6 pt-5 pb-6 md:pt-8 md:pb-10">
         {eyebrow && (
           <SceneKicker
             index={index}
@@ -32,7 +32,7 @@ export default function PageHero({
         </Reveal>
         <Reveal delay={160}>
           <p
-            className={`text-lg max-w-xl mt-6 leading-relaxed ${
+            className={`text-base md:text-lg max-w-xl mt-3 md:mt-6 leading-relaxed ${
               dark ? "text-ink/70" : "text-bone-dim"
             }`}
           >

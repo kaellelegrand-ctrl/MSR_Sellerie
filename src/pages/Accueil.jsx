@@ -66,7 +66,7 @@ export default function Accueil() {
       <section
         onMouseMove={handleHeroMouseMove}
         onMouseLeave={handleHeroMouseLeave}
-        className="relative bg-bone px-6 pt-36 pb-12 md:pb-16"
+        className="relative bg-bone px-6 pt-22 pb-8 md:pt-36 md:pb-16"
       >
         <div
           aria-hidden="true"
@@ -87,23 +87,26 @@ export default function Accueil() {
             <Reveal delay={60}>
               <h1 className="font-display font-bold text-mega text-ink">
                 Donner une
-                <br />
+                <br className="hidden md:block" />
+                <span className="md:hidden"> </span>
                 seconde vie
-                <br />
+                <br className="hidden md:block" />
+                <span className="md:hidden"> </span>
                 à ce qui vous
-                <br />
+                <br className="hidden md:block" />
+                <span className="md:hidden"> </span>
                 accompagne.
               </h1>
             </Reveal>
             <Reveal delay={120}>
-              <p className="mt-6 max-w-lg text-lg leading-relaxed text-ink/70">
+              <p className="mt-4 max-w-lg text-base leading-relaxed text-ink/70 md:mt-6 md:text-lg">
                 Sellerie médicale, automobile, sport et plastification — un
                 savoir-faire artisanal au service des professionnels qui ne
                 veulent pas jeter ce qui fonctionne encore.
               </p>
             </Reveal>
             <Reveal delay={100}>
-              <div className="mt-6 flex flex-wrap items-center gap-6">
+              <div className="mt-5 flex flex-wrap items-center gap-6 md:mt-6">
                 <CtaButton
                   href="#specialites"
                   onClick={(e) => {
@@ -123,9 +126,9 @@ export default function Accueil() {
             (position absolute) et posé au-dessus de tout, sans jamais être
             piégé par un ancêtre — z-index très élevé, aucun overflow-hidden
             ni clip-path sur les parents. */}
-        <div className="pointer-events-none relative z-9999 mt-10 md:absolute md:inset-0 md:mt-0 md:flex md:items-center">
+        <div className="pointer-events-none relative z-9999 mt-6 md:absolute md:inset-0 md:mt-0 md:flex md:items-center">
           <div className="mx-auto w-full max-w-7xl px-0 md:flex md:justify-end md:px-6">
-            <div className="pointer-events-auto mx-auto w-full max-w-xs md:mx-0 md:max-w-md min-[1460px]:translate-x-25 xl:max-w-3xl min-[1650px]:max-w-242!">
+            <div className="pointer-events-auto mx-auto w-full md:mx-0 md:max-w-md min-[1460px]:translate-x-25 xl:max-w-3xl min-[1650px]:max-w-242!">
               <Reveal delay={160} type="scale">
                 <div
                   ref={parallaxRef}
@@ -144,7 +147,7 @@ export default function Accueil() {
         <Reveal
           type="line"
           delay={120}
-          className="relative mx-auto mt-10 flex h-px w-full max-w-7xl"
+          className="relative mx-auto mt-6 flex h-px w-full max-w-7xl md:mt-10"
         >
           <span className="h-full flex-1 bg-[#1B4FA0]" />
           <span className="h-full flex-1 bg-ink" />
@@ -155,7 +158,7 @@ export default function Accueil() {
           type="button"
           onClick={() => lenis.scrollTo("#philosophie", { offset: -100 })}
           aria-label="Découvrir la suite"
-          className="group relative z-10 mx-auto mt-8 flex flex-col items-center gap-2 text-ink/50 transition-colors hover:text-ink"
+          className="group relative z-10 mx-auto mt-5 flex flex-col items-center gap-2 text-ink/50 transition-colors hover:text-ink md:mt-8"
         >
           <span className="font-mono text-xs uppercase tracking-[0.25em]">
             Découvrir
@@ -170,16 +173,16 @@ export default function Accueil() {
       <GoogleReviews index="02" />
 
       {/* SCÈNE 03 — LA PHILOSOPHIE */}
-      <section id="philosophie" className="max-w-6xl mx-auto px-6 py-12 md:py-16">
+      <section id="philosophie" className="max-w-6xl mx-auto px-6 py-8 md:py-16">
         <SceneKicker index="03" label="Notre philosophie" />
-        <div className="grid gap-8 md:grid-cols-2 md:gap-10">
+        <div className="grid gap-4 md:grid-cols-2 md:gap-10">
           <Reveal>
             <h2 className="font-display font-bold text-act text-bone">
               L'art du détail.
             </h2>
           </Reveal>
           <Reveal delay={60}>
-            <div className="space-y-4 text-lg leading-relaxed text-bone-dim">
+            <div className="space-y-3 text-base leading-relaxed text-bone-dim md:space-y-4 md:text-lg">
               <p>
                 Plutôt que de remplacer un mobilier encore parfaitement
                 fonctionnel, nous intervenons directement sur son revêtement
@@ -197,17 +200,17 @@ export default function Accueil() {
       </section>
 
       {/* SCÈNE 04 — LES UNIVERS */}
-      <section id="specialites" className="bg-ink-light py-12 md:py-16">
+      <section id="specialites" className="bg-ink-light py-8 md:py-16">
         <div className="max-w-7xl mx-auto px-6">
           <SceneKicker index="04" label="Nos univers" />
           <Reveal>
-            <h2 className="font-display font-bold text-act text-bone mb-6 max-w-2xl">
+            <h2 className="font-display font-bold text-act text-bone mb-4 max-w-2xl md:mb-6">
               Un métier,
               <br />
               quatre univers.
             </h2>
           </Reveal>
-          <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
+          <div className="grid gap-3 sm:grid-cols-2 sm:gap-5 lg:grid-cols-4">
             {specialties.map((s, i) => (
               <Reveal key={s.to} delay={i * 50} className="h-full">
                 <SpecialtyCard {...s} />
@@ -219,15 +222,15 @@ export default function Accueil() {
 
       {/* SCÈNE 05 — LA TRANSFORMATION */}
       {featured.length > 0 && (
-        <section className="max-w-5xl mx-auto px-6 py-12 md:py-16">
+        <section className="max-w-5xl mx-auto px-6 py-8 md:py-16">
           <SceneKicker index="05" label="La transformation" />
           <Reveal>
-            <h2 className="font-display font-bold text-act text-bone mb-3">
+            <h2 className="font-display font-bold text-act text-bone mb-2 md:mb-3">
               Une transformation visible.
             </h2>
           </Reveal>
           <Reveal delay={60}>
-            <p className="mb-6 max-w-xl text-lg leading-relaxed text-bone-dim">
+            <p className="mb-4 max-w-xl text-base leading-relaxed text-bone-dim md:mb-6 md:text-lg">
               Faites glisser pour comparer — la même pièce, avant et après
               notre intervention.
             </p>
@@ -239,21 +242,21 @@ export default function Accueil() {
       )}
 
       {/* SCÈNE 06 — LE SAVOIR-FAIRE */}
-      <section className="bg-ink-light py-12 md:py-16">
+      <section className="bg-ink-light py-8 md:py-16">
         <div className="max-w-6xl mx-auto px-6">
           <SceneKicker index="06" label="Le savoir-faire" />
           <Reveal>
-            <h2 className="font-display font-bold text-act text-bone mb-8 max-w-2xl">
+            <h2 className="font-display font-bold text-act text-bone mb-5 max-w-2xl md:mb-8">
               Le détail
               <br />
               change tout.
             </h2>
           </Reveal>
 
-          <div className="space-y-8">
-            <div className="grid items-center gap-6 md:grid-cols-[2fr_3fr] md:gap-10">
+          <div className="space-y-5 md:space-y-8">
+            <div className="grid items-center gap-4 md:grid-cols-[2fr_3fr] md:gap-10">
               <Reveal type="scale">
-                <div className="aspect-4/3 w-full overflow-hidden rounded-2xl bg-ink">
+                <div className="aspect-video w-full overflow-hidden rounded-2xl bg-ink md:aspect-4/3">
                   <img
                     src="/sur-mesure/sur-mesure-1.jpg"
                     alt="Matériaux découpés à l'atelier"
@@ -262,10 +265,10 @@ export default function Accueil() {
                 </div>
               </Reveal>
               <Reveal delay={60}>
-                <h3 className="font-display font-semibold text-2xl text-bone mb-2">
+                <h3 className="font-display font-semibold text-xl text-bone mb-1.5 md:text-2xl md:mb-2">
                   Adapté à votre projet
                 </h3>
-                <p className="text-bone-dim text-lg leading-relaxed">
+                <p className="text-bone-dim text-base leading-relaxed md:text-lg">
                   Chaque projet est unique. Nous concevons et réalisons vos
                   pièces selon vos dimensions, vos matières et votre usage,
                   qu'il s'agisse d'une pièce unique ou d'une petite série.
@@ -273,19 +276,19 @@ export default function Accueil() {
               </Reveal>
             </div>
 
-            <div className="grid items-center gap-6 md:grid-cols-[3fr_2fr] md:gap-10">
+            <div className="grid items-center gap-4 md:grid-cols-[3fr_2fr] md:gap-10">
               <Reveal>
-                <h3 className="font-display font-semibold text-2xl text-bone mb-2">
+                <h3 className="font-display font-semibold text-xl text-bone mb-1.5 md:text-2xl md:mb-2">
                   Le soin du détail
                 </h3>
-                <p className="text-bone-dim text-lg leading-relaxed">
+                <p className="text-bone-dim text-base leading-relaxed md:text-lg">
                   Forme, couleur, finition : nous étudions avec vous chaque
                   détail afin d'obtenir un résultat parfaitement adapté à
                   votre besoin.
                 </p>
               </Reveal>
               <Reveal delay={60} type="scale">
-                <div className="aspect-4/3 w-full overflow-hidden rounded-2xl bg-ink">
+                <div className="aspect-video w-full overflow-hidden rounded-2xl bg-ink md:aspect-4/3">
                   <img
                     src="/sur-mesure/sur-mesure-2.jpg"
                     alt="Réserve de matières à l'atelier"
@@ -299,7 +302,7 @@ export default function Accueil() {
       </section>
 
       {/* SCÈNE 07 — STATEMENT FINAL */}
-      <section className="bg-bone px-6 py-16 text-center md:py-20">
+      <section className="bg-bone px-6 py-10 text-center md:py-20">
         <div className="mx-auto max-w-3xl">
           <Reveal>
             <h2 className="font-display font-bold text-act text-ink">
@@ -309,12 +312,12 @@ export default function Accueil() {
             </h2>
           </Reveal>
           <Reveal delay={60}>
-            <p className="mt-3 font-display italic text-2xl text-leather-light">
+            <p className="mt-2 font-display italic text-xl text-leather-light md:mt-3 md:text-2xl">
               Il mérite une signature.
             </p>
           </Reveal>
           <Reveal delay={120}>
-            <CtaButton to="/contact" size="lg" className="mt-8">
+            <CtaButton to="/contact" size="lg" className="mt-6 md:mt-8">
               Parlons de votre projet
             </CtaButton>
           </Reveal>

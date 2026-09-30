@@ -1,6 +1,7 @@
 import { BrowserRouter, Routes, Route, useLocation } from "react-router-dom"
 import Navbar from "./components/Navbar"
 import Footer from "./components/Footer"
+import MobileTabBar from "./components/MobileTabBar"
 import ScrollToTop from "./components/ScrollToTop"
 import Accueil from "./pages/Accueil"
 import SellerieMedicale from "./pages/SellerieMedicale"
@@ -16,7 +17,7 @@ function AnimatedRoutes() {
   return (
     <main
       key={pathname}
-      className={`animate-fade-in ${isHome ? "" : "pt-30"}`}
+      className={`animate-fade-in ${isHome ? "" : "pt-16 md:pt-30"}`}
     >
       <Routes>
         <Route path="/" element={<Accueil />} />
@@ -34,10 +35,11 @@ function App() {
   return (
     <BrowserRouter>
       <ScrollToTop />
-      <div className="flex flex-col">
+      <div className="flex min-h-dvh flex-col pb-[calc(3.75rem+env(safe-area-inset-bottom))] md:pb-0">
         <Navbar />
         <AnimatedRoutes />
         <Footer />
+        <MobileTabBar />
       </div>
     </BrowserRouter>
   )

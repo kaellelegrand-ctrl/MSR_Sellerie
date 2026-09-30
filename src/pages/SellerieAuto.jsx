@@ -33,10 +33,10 @@ export default function SellerieAuto() {
         description="MSR Sellerie intervient sur le ciel de toit de votre véhicule pour lui redonner un intérieur net et durable."
       />
 
-      <section className="max-w-6xl mx-auto px-6 pt-10 pb-10 md:pt-12 md:pb-12">
-        <div className="grid gap-8 md:grid-cols-[1fr_1.1fr] md:gap-12 items-center">
+      <section className="max-w-6xl mx-auto px-6 pt-6 pb-6 md:pt-12 md:pb-12">
+        <div className="grid gap-4 md:grid-cols-[1fr_1.1fr] md:gap-12 items-center">
           <Reveal type="scale">
-            <div className="aspect-4/5 w-full overflow-hidden rounded-2xl bg-ink">
+            <div className="aspect-video w-full overflow-hidden rounded-2xl bg-ink md:aspect-4/5">
               <img
                 src="/avant-apres/auto-1-apres.jpg"
                 alt="Ciel de toit automobile rénové par MSR Sellerie"
@@ -45,10 +45,10 @@ export default function SellerieAuto() {
             </div>
           </Reveal>
           <Reveal delay={80}>
-            <p className="font-display italic text-2xl md:text-3xl leading-snug text-leather-light mb-6">
+            <p className="font-display italic text-xl md:text-3xl leading-snug text-leather-light mb-3 md:mb-6">
               Redonnez à votre habitacle son aspect d'origine.
             </p>
-            <div className="space-y-4 border-l-2 border-leather/30 pl-6 text-bone-dim leading-relaxed text-lg">
+            <div className="space-y-3 border-l-2 border-leather/30 pl-4 text-bone-dim leading-relaxed text-base md:space-y-4 md:pl-6 md:text-lg">
               <p>
                 Avec le temps, le ciel de toit peut se décoller, se
                 détendre ou se détériorer. MSR Sellerie intervient pour sa{" "}
@@ -75,14 +75,16 @@ export default function SellerieAuto() {
         <div className="max-w-6xl mx-auto px-6">
           {prestations.map((p, i) => (
             <Reveal key={p.title} delay={i * 80}>
-              <div className="group grid grid-cols-[auto_1fr] items-baseline gap-6 border-t border-ink/10 py-8 last:border-b md:grid-cols-[3rem_1fr_2fr] md:gap-10">
-                <span className="font-mono text-sm text-leather-light">
-                  0{i + 1}
-                </span>
-                <h3 className="font-display font-semibold text-xl text-ink transition-colors group-hover:text-leather-light md:text-2xl">
-                  {p.title}
-                </h3>
-                <p className="text-ink/60 leading-relaxed md:max-w-md">
+              <div className="group border-t border-ink/10 py-4 last:border-b md:grid md:grid-cols-[3rem_1fr_2fr] md:items-baseline md:gap-10 md:py-8">
+                <div className="flex items-baseline gap-3 md:contents">
+                  <span className="font-mono text-sm text-leather-light">
+                    0{i + 1}
+                  </span>
+                  <h3 className="font-display font-semibold text-lg text-ink transition-colors group-hover:text-leather-light md:text-2xl">
+                    {p.title}
+                  </h3>
+                </div>
+                <p className="mt-1.5 text-ink/60 text-sm leading-relaxed md:mt-0 md:max-w-md md:text-base">
                   {p.description}
                 </p>
               </div>
@@ -91,17 +93,17 @@ export default function SellerieAuto() {
         </div>
       </section>
 
-      <section className="max-w-5xl mx-auto px-6 py-10 md:py-12">
+      <section className="max-w-5xl mx-auto px-6 py-8 md:py-12">
         <SceneKicker label="Avant / Après" />
         <Reveal>
-          <h2 className="font-display font-bold text-act text-bone mb-4">
+          <h2 className="font-display font-bold text-act text-bone mb-2 md:mb-4">
             Même support.
             <br />
             Nouvelle allure.
           </h2>
         </Reveal>
         <Reveal delay={60}>
-          <p className="text-bone-dim leading-relaxed max-w-2xl text-lg mb-6">
+          <p className="text-bone-dim leading-relaxed max-w-2xl text-base mb-4 md:text-lg md:mb-6">
             Faites glisser pour comparer — ciels de toit rénovés par MSR
             Sellerie, sans changer la structure d'origine du véhicule.
           </p>
@@ -111,7 +113,7 @@ export default function SellerieAuto() {
         </Reveal>
       </section>
 
-      <section className="bg-bone px-6 py-14 text-center md:py-16">
+      <section className="bg-bone px-6 py-10 text-center md:py-16">
         <div className="mx-auto max-w-2xl">
           <Reveal>
             <h2 className="font-display font-bold text-act text-ink">
@@ -121,12 +123,12 @@ export default function SellerieAuto() {
             </h2>
           </Reveal>
           <Reveal delay={120}>
-            <p className="mt-5 text-lg leading-relaxed text-ink/70">
+            <p className="mt-3 text-base leading-relaxed text-ink/70 md:mt-5 md:text-lg">
               Une finition nette, sans remplacer tout l'habitacle.
             </p>
           </Reveal>
           <Reveal delay={220}>
-            <CtaButton to="/contact" size="lg" className="mt-8">
+            <CtaButton to="/contact" size="lg" className="mt-6 md:mt-8">
               Parlons de votre véhicule
             </CtaButton>
           </Reveal>

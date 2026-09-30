@@ -1,8 +1,12 @@
+// Tailles fluides sur mobile (clamp) : les bulles grandissent avec la
+// largeur de l'écran plutôt que de sauter d'une taille fixe à une autre
+// au breakpoint md — la valeur max de chaque clamp() rejoint exactement
+// la taille md: pour une transition sans à-coup.
 const sizes = [
-  "w-20 h-20 md:w-28 md:h-28",
-  "w-28 h-28 md:w-40 md:h-40",
-  "w-16 h-16 md:w-24 md:h-24",
-  "w-24 h-24 md:w-32 md:h-32",
+  "w-[clamp(3rem,14.25vw+0.16rem,7rem)] h-[clamp(3rem,14.25vw+0.16rem,7rem)] md:w-28 md:h-28",
+  "w-[clamp(4rem,20.36vw+0.23rem,10rem)] h-[clamp(4rem,20.36vw+0.23rem,10rem)] md:w-40 md:h-40",
+  "w-[clamp(2.5rem,12.21vw+0.14rem,6rem)] h-[clamp(2.5rem,12.21vw+0.14rem,6rem)] md:w-24 md:h-24",
+  "w-[clamp(3.25rem,16.28vw+0.18rem,8rem)] h-[clamp(3.25rem,16.28vw+0.18rem,8rem)] md:w-32 md:h-32",
 ]
 const offsets = [
   "mt-0", "mt-3", "-mt-2", "mt-2", "-mt-3", "mt-3",
@@ -33,7 +37,7 @@ const clients = Array.from({ length: 12 }, (_, i) => ({
 
 export default function ClientsCloud() {
   return (
-    <div className="flex flex-wrap justify-center items-center gap-3 md:gap-6">
+    <div className="flex flex-wrap justify-center items-center gap-[clamp(0.5rem,2vw,1rem)] md:gap-6">
       {clients.map((c, i) => {
         const [x, y, duration, delay] = float[i % float.length]
         return (

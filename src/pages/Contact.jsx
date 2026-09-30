@@ -38,16 +38,16 @@ export default function Contact() {
             textClassName="text-leather-light"
           />
           <Reveal type="scale">
-            <div className="flex flex-col items-center gap-3 text-center">
+            <div className="flex flex-col items-center gap-2 text-center md:gap-3">
               <img
                 src="/logo.png"
                 alt="MSR Sellerie"
-                className="h-20 w-auto object-contain md:h-24"
+                className="h-14 w-auto object-contain md:h-24"
               />
-              <h1 className="font-display font-semibold text-2xl text-ink md:text-3xl">
+              <h1 className="font-display font-semibold text-xl text-ink md:text-3xl">
                 Nos coordonnées.
               </h1>
-              <p className="max-w-md text-ink/70 leading-relaxed">
+              <p className="max-w-md text-sm text-ink/70 leading-relaxed md:text-base">
                 Téléphone, atelier, horaires — tout ce qu'il faut pour nous
                 joindre.
               </p>
@@ -56,7 +56,7 @@ export default function Contact() {
         </div>
       </section>
 
-      <section className="max-w-4xl mx-auto px-6 pb-16 md:pb-20">
+      <section className="max-w-4xl mx-auto px-6 pb-10 md:pb-20">
         <div className="divide-y divide-black/10 border-t border-b border-black/10">
           {info.map((item, i) => {
             const Tag = item.href ? "a" : "div"
@@ -64,12 +64,12 @@ export default function Contact() {
               <Reveal key={item.label} delay={i * 80}>
                 <Tag
                   href={item.href}
-                  className="group grid grid-cols-1 gap-1.5 py-5 md:grid-cols-[11rem_1fr_9rem] md:items-center md:gap-6 md:py-6"
+                  className="group grid grid-cols-1 gap-1 py-4 md:grid-cols-[11rem_1fr_9rem] md:items-center md:gap-6 md:py-6"
                 >
                   <p className="font-mono text-xs uppercase tracking-[0.25em] text-leather-light">
                     {item.label}
                   </p>
-                  <p className="font-display font-semibold text-2xl text-bone md:text-3xl">
+                  <p className="font-display font-semibold text-xl text-bone md:text-3xl">
                     {item.value}
                   </p>
                   {item.action && (
